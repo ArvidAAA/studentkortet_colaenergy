@@ -6,9 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
-def personnummer():
-    #Start nummer
-    startnmr = "040613"
+def personnummer(start_nummer):
 
     #Öppna Personnmr Sida
     driver=webdriver.Chrome(executable_path="./chromedriver.exe")
@@ -16,7 +14,7 @@ def personnummer():
 
     #välj låda skriv nummer o press enter
     username = driver.find_element_by_name('number')
-    username.send_keys(startnmr)
+    username.send_keys(start_nummer)
     driver.find_element_by_name("number").send_keys(Keys.ENTER)
 
     #Kopiera personnummer och gör om texten

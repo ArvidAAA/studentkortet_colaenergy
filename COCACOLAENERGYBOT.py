@@ -15,11 +15,12 @@ import random
 
 print("COCA COLA BOT CHROMEDRIVER BY ARVID for educational purposes only")
 sleep(1)
+start_nummer = int(input("Start nummer, format like should be 6 numbers: "))
 
 
 #Funktionen bot
-def bot():
-  username_string = p_nummer.personnummer()
+def bot(start_nummer):
+  username_string = p_nummer.personnummer(start_nummer)
   print(username_string)
   #Öppnar koder.txt
   f = open("koder.txt", "a")
@@ -48,12 +49,12 @@ def bot():
               print(kod)
               f.close()
               driver.close()
-              bot()
+              bot(start_nummer)
           except:
               f.close()
               driver.close()
-              bot()
+              bot(start_nummer)
 
 
 #Används för att starta botten när du kör programmet direkt
-bot()
+bot(start_nummer)
