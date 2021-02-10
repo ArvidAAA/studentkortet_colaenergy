@@ -15,7 +15,7 @@ import random
 
 print("COCA COLA BOT CHROMEDRIVER BY ARVID for educational purposes only")
 sleep(1)
-start_nummer = int(input("Start nummer, format like should be 6 numbers: "))
+start_nummer = str(input("Start nummer, format like should be 6 numbers: "))
 
 
 #Funktionen bot
