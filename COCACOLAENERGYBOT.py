@@ -5,8 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-import p_nummer
+import personnummer
 
 import os
 from time import sleep
@@ -15,13 +14,11 @@ import random
 
 print("COCA COLA BOT CHROMEDRIVER BY ARVID for educational purposes only")
 sleep(1)
-start_nummer = str(input("Start nummer, format like should be 6 numbers: "))
 
 
 #Funktionen bot
-def bot(start_nummer):
-  username_string = p_nummer.personnummer(start_nummer)
-  print(username_string)
+def bot():
+  username_string = "Hej"
   #Öppnar koder.txt
   f = open("koder.txt", "a")
 
@@ -49,12 +46,12 @@ def bot(start_nummer):
               print(kod)
               f.close()
               driver.close()
-              bot(start_nummer)
+              bot()
           except:
               f.close()
               driver.close()
-              bot(start_nummer)
+              bot()
 
 
 #Används för att starta botten när du kör programmet direkt
-bot(start_nummer)
+bot()
